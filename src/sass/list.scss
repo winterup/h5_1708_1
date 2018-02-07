@@ -1,0 +1,224 @@
+// 导入scss文件
+@import 'var';
+
+h6{
+    height: 22px;
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 22px;
+    padding-left: 5px;
+}
+
+.main_l{
+    float: left;
+    width: 208px;
+
+    .main_lt{
+        width: 208px;
+        border: 1px solid #ccc;
+        border-top: 2px solid orange;
+
+        div{
+            border-bottom: 1px solid #ccc;
+            height: 32px;
+            line-height: 32px;
+            padding-left: 15px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border-top: 1px solid #ccc;
+            font-weight: 900;
+        }
+        
+        ul{
+            display:none;
+            height: 83px;
+            border-bottom: 1px solid #ccc;
+            padding-left: 30px;
+            padding-bottom: 5px;
+            // display: none;
+            li{
+                float: left;
+                margin-right: 30px;
+                line-height: 24px;
+                font-size: 12px;
+                list-style-type:disc;
+            }
+        } 
+    }
+
+    .main_lc{
+        width: 208px;
+        border: 1px solid #ccc;
+        border-top: 2px solid orange;
+        margin-top: 15px;
+        div{
+            border-bottom: 1px solid #ccc;
+            height: 32px;
+            line-height: 32px;
+            padding-left: 15px;
+            font-size: 14px;
+            border-top: 1px solid #ccc;
+            font-weight: 900;
+        }
+        ul{
+            padding-top: 10px;
+            padding-left: 10px;
+            li i{
+                color: $hilightColor;
+            }
+            li span{
+                display: block;
+                float: right;
+                margin-right: 30px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            li a{
+                font-size: 14px;
+                line-height: 40px;
+            }
+        }
+    }
+
+    .main_lb{
+        width: 208px;
+        border: 1px solid #ccc;
+        border-top: 2px solid orange;
+        margin-top: 15px;
+        div{
+            border-bottom: 1px solid #ccc;
+            height: 32px;
+            line-height: 32px;
+            padding-left: 15px;
+            font-size: 14px;
+            border-top: 1px solid #ccc;
+            font-weight: 900;
+        }
+        p{
+            height: 31px;
+            border-top: 1px dashed #ccc;
+            text-align: center;
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
+} 
+
+.main_r{
+    float: right;
+    width: 960px;
+
+    .main_rt{
+        width: 960px;
+        height: 78px;
+        border: 1px solid #ccc;
+        padding-top: 10px;
+        padding-left: 10px;
+
+        h5{
+            font-size: 14px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        ul li{
+            float: left;
+            font-size: 12px;
+            margin-right: 20px;
+        }
+    }
+
+    .main_rc{
+        width: 960px;
+        height: 78px;
+        border: 1px solid #ccc;
+        padding-top: 10px;
+        padding-left: 10px;
+        margin-top: 20px;
+
+        h5{
+            font-size: 14px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        ul li{
+            float: left;
+            font-size: 12px;
+            margin-right: 20px;
+        }
+
+        .active{
+            background: $hilightColor;
+            color: #fff;
+            padding: 5px;
+        }
+    }
+
+    .main_rb{
+        width: 960px;
+        // height: 81px;
+        border: 1px solid #ccc;
+        border-top: 2px solid $hilightColor;
+        padding-top: 10px;
+        margin-top: 30px;
+
+        .main_rbt{
+            height: 40px;
+            font-size: 12px;
+            padding-left: 20px;
+            border-bottom: 1px solid #ccc;
+            #guanjianzi{
+                width: 130px;
+                height: 26px;
+                border: 1px solid #ccc;
+                margin-right: 20px;
+            }
+            #xiaofanwei,#dafanwei{
+                width: 32px;
+                height: 26px;
+                border: 1px solid #ccc;
+            }
+            #dafanwei{
+                margin-right: 20px;
+            }
+        }
+        .main_rbb{
+            height: 32px;
+            font-size: 12px;
+            line-height: 30px;
+            button{
+                border-right: 1px solid #ccc;
+            }
+            p{
+                float: right;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    .main_rlist{
+        padding-top: 10px;
+        padding-left: 10px;
+        ul li{
+            margin-right: 17px;
+            margin-bottom: 20px;
+            width: 220px;
+            height: 300px;
+            font-size: 12px;
+            line-height: 20px;
+            float: left;
+            img{
+                width: 220px;
+                border: 1px solid #ddd;
+            }
+            p{
+                margin-bottom: 5px;
+            }
+            i{
+                color: $hilightColor;
+                font-size: 14px;
+            }
+        }
+    }
+}

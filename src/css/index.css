@@ -1,0 +1,332 @@
+html {
+  background: #F3F3F3;
+}
+
+#banner .lunbotu ul li {
+  width: 100%;
+  height: 400px;
+  display: none;
+}
+
+#banner .lunbotu ul li:nth-child(1) {
+  display: block;
+}
+
+#banner .gonggao {
+  width: 220px;
+  height: 400px;
+  opacity: 0.3;
+  background: #000;
+  position: absolute;
+  right: 41px;
+  top: 186px;
+}
+
+#banner .gonggao1 {
+  position: absolute;
+  top: 196px;
+  right: 51px;
+  width: 200px;
+  height: 380px;
+  background: url(../img/gonggao1.png);
+}
+
+#main .zhanshi {
+  margin-top: 20px;
+  height: 180px;
+  margin-bottom: 20px;
+}
+
+#main .zhanshi ul li {
+  float: left;
+  margin-right: 20px;
+}
+
+#main .zhanshi ul li img {
+  width: 280px;
+  height: 180px;
+}
+
+#main .xianshi {
+  height: 400px;
+}
+
+#main .xianshi .qianggou {
+  width: 940px;
+  height: 400px;
+  float: left;
+  padding-left: 25px;
+  padding-top: 18px;
+  background: #fff;
+}
+
+#main .xianshi .qianggou .qianggou_t {
+  height: 18px;
+  margin-bottom: 18px;
+}
+
+#main .xianshi .qianggou .qianggou_t h4 {
+  border-left: 5px solid #FE5722;
+  padding-left: 10px;
+  float: left;
+}
+
+#main .xianshi .qianggou .qianggou_t span {
+  display: block;
+  float: right;
+  margin-right: 20px;
+}
+
+#main .xianshi .qianggou .qianggou_b {
+  height: 345px;
+}
+
+#main .xianshi .qianggou .qianggou_b li {
+  float: left;
+  text-align: center;
+  line-height: 24px;
+  font-size: 12px;
+}
+
+#main .xianshi .qianggou .qianggou_b li img {
+  position: relative;
+}
+
+#main .xianshi .qianggou .qianggou_b li i {
+  color: red;
+}
+
+#main .xianshi .tuangou {
+  width: 220px;
+  height: 366px;
+  float: right;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  background: #fff;
+  position: relative;
+}
+
+#main .xianshi .tuangou div {
+  width: 78px;
+  height: 77px;
+  position: absolute;
+  background: url(../img/tuangou1.png);
+  right: 0;
+  top: 0;
+}
+
+#main .xianshi .tuangou img {
+  height: 215px;
+}
+
+#main .xianshi .tuangou i {
+  font-weight: 900;
+  color: #FE5722;
+  font-size: 18px;
+  line-height: 38px;
+}
+
+#main .xianshi .tuangou button {
+  width: 180px;
+  height: 50px;
+  background: #FE5722;
+  line-height: 50px;
+  color: #fff;
+}
+
+#main .meiri {
+  margin-top: 20px;
+}
+
+#main .meiri .meiri_t {
+  height: 50px;
+  background: #FAFAFA;
+}
+
+#main .meiri .meiri_t div {
+  float: left;
+  text-align: center;
+  line-height: 50px;
+  width: 196px;
+  font-size: 18px;
+}
+
+#main .meiri .meiri_t .active {
+  border-top: 2px solid #FE5722;
+  color: #FE5722;
+  height: 48px;
+}
+
+#main .meiri .meiri_b {
+  height: 315px;
+  padding-left: 20px;
+  background: #fff;
+}
+
+#main .meiri .meiri_b div {
+  display: none;
+  height: 315px;
+}
+
+#main .meiri .meiri_b div ul {
+  height: 315px;
+}
+
+#main .meiri .meiri_b div ul li {
+  float: left;
+  margin-right: 30px;
+  width: 200px;
+}
+
+#main .meiri .meiri_b div ul li img {
+  width: 130px;
+  height: 200px;
+  text-align: center;
+  margin: 15px 35px;
+}
+
+#main .meiri .meiri_b div ul li p {
+  line-height: 20px;
+  font-size: 16px;
+}
+
+#main .meiri .meiri_b div ul li i {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 900;
+  color: #FE5722;
+}
+
+#main .meiri .meiri_b div:nth-child(1) {
+  display: block;
+}
+
+#main .jingtiao {
+  margin-top: 36px;
+}
+
+#main .jingtiao h3 {
+  height: 35px;
+  line-height: 35px;
+  padding-left: 40px;
+  background: url(../img/jingtiao1.png) no-repeat 4px;
+  font-size: 22px;
+}
+
+#main .jingtiao .jingtiao_t {
+  height: 620px;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tl {
+  float: left;
+  margin-right: 20px;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tc {
+  float: left;
+  width: 720px;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tc ul li {
+  float: left;
+  width: 220px;
+  height: 290px;
+  background: #fff;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tc ul li img {
+  width: 165px;
+  height: 160px;
+  margin-bottom: 30px;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tc ul li i {
+  color: #FE5722;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tc ul .active {
+  box-shadow: 0px 3px 10px 3px #ddd;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tr {
+  float: left;
+  width: 220px;
+  height: 600px;
+  background: #fff;
+  padding-top: 14px;
+  padding-left: 18px;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tr h4 {
+  color: red;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tr ul li {
+  margin-top: 30px;
+  height: 60px;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tr ul li span {
+  display: block;
+  float: left;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tr ul li span:nth-child(1) {
+  background: #FE5722;
+  color: #fff;
+  padding: 0 5px;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tr ul li span:nth-child(3) {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+#main .jingtiao .jingtiao_t .jingtiao_tr ul li span:nth-child(3) i {
+  background: #FE5722;
+  color: #fff;
+}
+
+#main .xihuan h2 {
+  height: 80px;
+  width: 350px;
+  background: url(../img/main8.png) center;
+  margin-left: 414px;
+}
+
+#main .xihuan .xihuan_t {
+  height: 340px;
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+#main .xihuan .xihuan_t .xihuan_tl {
+  float: left;
+}
+
+#main .xihuan .xihuan_t .xihuan_tc {
+  float: left;
+  width: 290px;
+  padding-top: 20px;
+  padding-left: 30px;
+  line-height: 30px;
+}
+
+#main .xihuan .xihuan_t .xihuan_tc h4 {
+  font-size: 18px;
+}
+
+#main .xihuan .xihuan_t .xihuan_tc ul li {
+  font-size: 14px;
+}
+
+#main .xihuan .xihuan_t .xihuan_tr {
+  float: left;
+}

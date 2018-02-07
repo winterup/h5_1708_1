@@ -1,0 +1,218 @@
+// 导入scss文件
+@import 'var';
+
+h6{
+    // height: 40px;
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 40px;
+    padding-left: 5px;
+}
+
+.main_t{
+    height: 500px;
+
+    .main_tl{
+        width: 410px;
+        height: 500px;
+        float: left;
+        div{
+            border: 1px solid #ddd;
+            img{
+                width: 408px;
+                height: 410px;
+            }
+        } 
+        ul{
+            height: 90px;
+            width: 410px;   
+            padding-top: 10px;
+            li{
+                width: 60px;
+                height: 60px;
+                border: 1px solid #ddd;
+                float: left;
+                margin-right: 10px;
+                img{
+                    width: 58px;
+                    height: 58px;
+                }
+            }
+        }
+        .active{
+            border: 1px solid $hilightColor;
+        }
+    }
+
+    .main_tc{
+        width: 580px;
+        padding-left: 25px;
+        float: left;
+        h3{
+            // height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+        }
+        .shoujia{
+            width: 530px;
+            height: 80px;
+            background: #E8E8EA;
+            padding-left: 20px;
+            padding-top: 25px;
+            span{
+                font-size: 12px;
+                line-height: 24px;
+                margin-right: 10px;
+                i{
+                    font-size: 24px;
+                    color:$hilightColor;
+                }
+            }
+        }
+
+        .peisong{
+            width: 530px;
+            height: 50px;
+            padding-left: 20px;
+            padding-top: 10px;
+            line-height: 26px;
+            font-size: 12px;
+            background: url(../img/mianyun.png) no-repeat right;
+        }
+
+        .xiaoliang{
+            width: 530px;
+            height: 42px;
+            border-top: 1px dashed #ddd;
+            border-bottom: 1px dashed #ddd;
+            font-size: 12px;
+            line-height: 42px;
+            span{
+                border-right: 1px solid #ddd;
+                padding: 0 105px;
+                i{
+                    color: $hilightColor;
+                }
+            }
+        }
+
+        .shuliang{
+            height: 80px;
+            padding-left: 20px;
+            padding-top: 15px;
+            font-size: 12px;
+            // line-height: 42px;
+            div{
+                float: left;
+                height: 42px;
+                line-height: 42px;
+                margin-right: 10px;
+            }
+            input{
+                width: 76px;
+                height: 42px;
+                border: 1px solid #ddd;
+                // padding-left: 10px;
+                text-align: center;
+            }
+            span{
+                display: block;
+                float: left;
+                width: 20px;
+                height: 20px;
+                // border: 1px solid #ddd;
+                margin-bottom: 2px;
+            }
+        }
+
+        .caozuo{
+            height: 40px;
+            padding-left: 20px;
+            .goumai{
+                width: 200px;
+                height: 40px;
+                border: 2px solid $hilightColor;
+                color: $hilightColor;
+                background: #fff;
+                margin-right: 10px;
+            }
+            .gouwuche{
+                width: 200px;
+                height: 40px;
+                background: $hilightColor;
+                color: #fff;
+            }
+        }
+    }
+
+    .main_tr{
+        float: left;
+        width: 190px;
+        height: 500px;
+        background: url(../img/fuwuzhichi.png) no-repeat;
+    }
+}
+
+.main_c{
+    height: 80px;
+    background: url(../img/shoucang.png) no-repeat;
+}
+
+.main_b{
+    height: 2000px;
+    .main_bl{
+        width: 210px;
+        padding-left: 15px;
+        padding-top: 15px;
+        border: 1px solid #ddd;
+        float: left;
+        h4{
+            font-size: 16px;
+            height: 16px;
+            line-height: 16px;
+            margin-bottom: 20px;
+        }
+        ul li{
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 20px;
+            i{
+                color: $hilightColor;
+                font-weight: 900;
+            }
+        }
+    }
+
+    .main_br{
+        float: right;
+        width: 950px;
+        .main_brt{
+            width: 950px;
+            height: 45px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            li{
+                float: left;
+                line-height: 45px;
+                height: 45px;
+                span{
+                    font-size: 12px;
+                    padding: 0 40px;
+                    border-right: 1px solid #ddd;
+                }
+            }
+            .active{
+                border: 1px solid $hilightColor;
+                color:$hilightColor;
+                border-bottom: 0;
+                span{
+                    border: 0;
+                }
+            }
+        }
+
+        .main_brb{
+            text-align: center;
+        }
+    }
+}

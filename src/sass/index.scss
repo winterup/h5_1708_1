@@ -1,0 +1,315 @@
+// 导入scss文件
+@import 'var';
+
+html{
+    background: #F3F3F3;
+}
+
+#banner{
+    .lunbotu ul li{
+        width: 100%;
+        height: 400px;
+        display:none;
+    }  
+    .lunbotu ul li:nth-child(1){
+        display:block;
+    }
+
+    .gonggao{
+        width: 220px;
+        height: 400px;
+        opacity:0.3;
+        background: #000;
+        position:absolute;
+        right: 41px;
+        top: 186px;
+
+        
+    }
+    .gonggao1{
+        position:absolute;
+        top: 196px;
+        right: 51px;
+        width: 200px;
+        height: 380px;
+        background: url(../img/gonggao1.png);
+    }
+}
+#main .zhanshi{
+    margin-top: 20px;
+    height: 180px;
+    margin-bottom: 20px;
+
+    ul li{
+        float: left;
+        margin-right: 20px;
+
+        img{
+            width: 280px;
+            height: 180px;
+        }
+    }
+}
+
+#main .xianshi{
+    height: 400px;
+
+    .qianggou{
+        width: 940px;
+        height: 400px;
+        float: left;
+        padding-left: 25px;
+        padding-top: 18px;
+        background: #fff;
+
+        .qianggou_t{
+            height: 18px;
+            margin-bottom: 18px;
+            h4{
+                border-left: 5px solid $hilightColor;
+                padding-left: 10px;
+                float: left;
+            }
+            span{
+                display:block;
+                float: right;
+                margin-right: 20px;
+            }
+        }
+
+        .qianggou_b{
+            height: 345px;
+
+            li{
+                float: left;
+                text-align: center;
+                line-height: 24px;
+                font-size: 12px;
+                
+                img{
+                    position:relative;
+                }
+                i{
+                    color:red;
+                }
+            }
+        }
+    }
+
+    .tuangou{
+        width: 220px;
+        height: 366px;
+        float: right;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        background: #fff;
+        position:relative;
+
+        div{
+            width: 78px;
+            height: 77px;
+            position:absolute;
+            background: url(../img/tuangou1.png);
+            right: 0;
+            top: 0;
+        }
+
+        img{
+            height: 215px;
+        }
+
+        i{
+            font-weight: 900;
+            color:$hilightColor;
+            font-size: 18px;
+            line-height: 38px;
+        }
+
+        button{
+            width: 180px;
+            height: 50px;
+            background: $hilightColor;
+            line-height: 50px;
+            color: #fff;
+        }
+    }
+}
+
+#main .meiri{
+    margin-top: 20px;
+
+    .meiri_t{
+        height: 50px;
+        background: #FAFAFA;
+
+        div{
+            float: left;
+            text-align: center;
+            line-height: 50px;
+            width: 196px;
+            font-size: 18px;
+        }
+        .active{
+            border-top: 2px solid $hilightColor;
+            color: $hilightColor;
+            height: 48px;
+        }
+    }     
+
+    .meiri_b{
+        height: 315px;
+        padding-left: 20px;
+        background: #fff;
+
+        div{
+            display:none;
+            height: 315px;
+
+            ul{
+                height: 315px;
+                li{
+                    float: left;
+                    margin-right: 30px;
+                    width: 200px;
+
+                    img{
+                        width: 130px;
+                        height: 200px;
+                        text-align: center;
+                        margin: 15px 35px;
+                    }
+                    p{
+                        line-height: 20px;
+                        font-size: 16px;
+                    }
+                    i{
+                        font-size: 16px;
+                        line-height: 16px;
+                        font-weight: 900;
+                        color:$hilightColor;
+                    }
+                }
+            } 
+        }
+
+        div:nth-child(1){
+            display:block;
+        }
+    }   
+}    
+
+#main .jingtiao{
+    margin-top: 36px;
+
+    h3{
+        height: 35px;
+        line-height: 35px;
+        padding-left: 40px;
+        background: url(../img/jingtiao1.png) no-repeat 4px;
+        font-size: 22px;      
+    }
+
+    .jingtiao_t{
+        height: 620px;
+
+        .jingtiao_tl{
+            float: left;
+            margin-right: 20px;
+        }
+        .jingtiao_tc{
+            float: left;
+            width: 720px;
+            ul{
+                li{
+                    float: left;
+                    width: 220px;
+                    height: 290px;
+                    background: #fff;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    padding-top: 20px;
+                    font-size: 16px;
+                    line-height: 26px;
+                    img{
+                        width: 165px;
+                        height: 160px;
+                        margin-bottom: 30px;
+                    }
+                    i{
+                        color: $hilightColor;
+                    }
+                }
+                .active{
+                    box-shadow: 0px 3px 10px 3px #ddd;
+                }
+            } 
+        }
+        .jingtiao_tr{
+            float: left;
+            width: 220px;
+            height: 600px;
+            background: #fff;
+            padding-top: 14px;
+            padding-left: 18px;
+            h4{
+                color: red;
+            }
+            ul li{
+                margin-top: 30px;
+                height: 60px;
+                span{
+                    display:block;
+                    float: left;
+                }
+                span:nth-child(1){
+                    background: $hilightColor;
+                    color:#fff;
+                    padding: 0 5px;
+                }
+                span:nth-child(3){
+                    font-size: 12px;
+                    line-height: 20px;
+                    i{
+                        background: $hilightColor;
+                        color:#fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#main .xihuan{
+    h2{
+        height: 80px;
+        width: 350px;
+        background: url(../img/main8.png) center;
+        margin-left: 414px;
+    }
+    .xihuan_t{
+        height: 340px;
+        background: #fff;
+        margin-bottom: 30px;
+        .xihuan_tl{
+            float: left;
+        }
+        .xihuan_tc{
+            float: left;
+            width: 290px;
+            padding-top: 20px;
+            padding-left: 30px;
+            line-height: 30px;
+            h4{
+                font-size: 18px;
+            }
+            ul li{
+                font-size: 14px;
+            }
+        }
+        .xihuan_tr{
+            float: left;
+        }
+    }
+}
