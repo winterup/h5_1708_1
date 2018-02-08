@@ -19,7 +19,7 @@ require(['config'],function(){
                 var $subMenu = $(this).children('ul');
                 $subMenu.fadeIn();
                 // 高亮当前li
-                $(this).addClass('active').siblings().removeClass('active');
+                $(this).addClass('active0').siblings().removeClass('active0');
             }).mouseleave(function(){
 
                 timer = setTimeout(function(){
@@ -27,7 +27,7 @@ require(['config'],function(){
                     $subMenu.fadeOut();
 
                 }.bind(this),300);
-                $(this).removeClass('active');
+                $(this).removeClass('active0');
             });
 
             // 二维码显示
@@ -63,7 +63,7 @@ require(['config'],function(){
                 },30);
             });
         });
-
+// --------------------------------------------------------------------------
         // 轮播图
             
         // 抖动图
@@ -110,27 +110,192 @@ require(['config'],function(){
 
         // tab切换
         // 高亮显示第一个tab
-        $('.meiri .meiri_t div').first().addClass('active');
+        $('.meiri .meiri_t div').first().addClass('active1');
         // 点击切换
         $('.meiri').on('mouseover','.meiri_t div',function(){
             // 获取当前索引值
             var idx = $(this).index();
             
             // * 高亮显示当前tab，去除其它高亮
-            $('.meiri .meiri_t div').eq(idx).addClass('active').siblings().removeClass('active');
+            $('.meiri .meiri_t div').eq(idx).addClass('active1').siblings().removeClass('active1');
 
             //* 显示对应图片，隐藏其它图片
             $('.meiri .meiri_b div').eq(idx).slideDown().siblings().slideUp();
         })
 
-        // 边框阴影
-        $('.jingtiao_tc ul li').on('mouseover',function(){
-            $(this).addClass('active');
+        // 导入数据
+        $.ajax({
+            url:'../api/index.php',
+            dataType:'json',
+            data:{
+                category:'母婴专区'
+            },
+            success:function(data){
+                // console.log(data);
+                var box1 = data.map(function(item){
+                    return`
+                    <li>
+                        <img src="${item.imgs}"/>
+                        <p>${item.name}</p>
+                        <span><i>${item.price}</i></span><span><del>￥</del></span>
+                    </li>
+                    `
+                }).join('');
+                $('.jingtiao_tc ul').html(box1);
+                // 边框阴影
+                $('.jingtiao_tc ul li').on('mouseover',function(){
+                    $(this).addClass('active2');
+                });
+                $('.jingtiao_tc ul li').on('mouseleave',function(){
+                    $(this).removeClass('active2');
+                });
+            }
         });
-        $('.jingtiao_tc ul li').on('mouseleave',function(){
-            $(this).removeClass('active');
+
+        $.ajax({
+            url:'../api/index.php',
+            dataType:'json',
+            data:{
+                category:'美妆个护'
+            },
+            success:function(data){
+                // console.log(data);
+                var box2 = data.map(function(item){
+                    return`
+                    <li>
+                        <img src="${item.imgs}"/>
+                        <p>${item.name}</p>
+                        <span><i>${item.price}</i></span><span><del>￥</del></span>
+                    </li>
+                    `
+                }).join('');
+                $('.meirong_tc ul').html(box2);
+                // 边框阴影
+                $('.meirong_tc ul li').on('mouseover',function(){
+                    $(this).addClass('active2');
+                });
+                $('.meirong_tc ul li').on('mouseleave',function(){
+                    $(this).removeClass('active2');
+                });
+            }
         });
+
+        $.ajax({
+            url:'../api/index.php',
+            dataType:'json',
+            data:{
+                category:'数码家电'
+            },
+            success:function(data){
+                // console.log(data);
+                var box2 = data.map(function(item){
+                    return`
+                    <li>
+                        <img src="${item.imgs}"/>
+                        <p>${item.name}</p>
+                        <span><i>${item.price}</i></span><span><del>￥</del></span>
+                    </li>
+                    `
+                }).join('');
+                $('.jiadian_tc ul').html(box2);
+                // 边框阴影
+                $('.jiadian_tc ul li').on('mouseover',function(){
+                    $(this).addClass('active2');
+                });
+                $('.jiadian_tc ul li').on('mouseleave',function(){
+                    $(this).removeClass('active2');
+                });
+            }
+        });
+
+        $.ajax({
+            url:'../api/index.php',
+            dataType:'json',
+            data:{
+                category:'家居日用'
+            },
+            success:function(data){
+                // console.log(data);
+                var box2 = data.map(function(item){
+                    return`
+                    <li>
+                        <img src="${item.imgs}"/>
+                        <p>${item.name}</p>
+                        <span><i>${item.price}</i></span><span><del>￥</del></span>
+                    </li>
+                    `
+                }).join('');
+                $('.fushi_tc ul').html(box2);
+                // 边框阴影
+                $('.fushi_tc ul li').on('mouseover',function(){
+                    $(this).addClass('active2');
+                });
+                $('.fushi_tc ul li').on('mouseleave',function(){
+                    $(this).removeClass('active2');
+                });
+            }
+        });
+
+        $.ajax({
+            url:'../api/index.php',
+            dataType:'json',
+            data:{
+                category:'环球美食'
+            },
+            success:function(data){
+                // console.log(data);
+                var box2 = data.map(function(item){
+                    return`
+                    <li>
+                        <img src="${item.imgs}"/>
+                        <p>${item.name}</p>
+                        <span><i>${item.price}</i></span><span><del>￥</del></span>
+                    </li>
+                    `
+                }).join('');
+                $('.shipin_tc ul').html(box2);
+                // 边框阴影
+                $('.shipin_tc ul li').on('mouseover',function(){
+                    $(this).addClass('active2');
+                });
+                $('.shipin_tc ul li').on('mouseleave',function(){
+                    $(this).removeClass('active2');
+                });
+            }
+        });
+
+        $.ajax({
+            url:'../api/index.php',
+            dataType:'json',
+            data:{
+                category:'运动户外'
+            },
+            success:function(data){
+                // console.log(data);
+                var box2 = data.map(function(item){
+                    return`
+                    <li>
+                        <img src="${item.imgs}"/>
+                        <p>${item.name}</p>
+                        <span><i>${item.price}</i></span><span><del>￥</del></span>
+                    </li>
+                    `
+                }).join('');
+                $('.huwai_tc ul').html(box2);
+                // 边框阴影
+                $('.huwai_tc ul li').on('mouseover',function(){
+                    $(this).addClass('active2');
+                });
+                $('.huwai_tc ul li').on('mouseleave',function(){
+                    $(this).removeClass('active2');
+                });
+            }
+        });
+
         
+
+
+//------------------------------------------------------------------------------------------ 
         // 导入尾部
         $('footer').load('../html/footer.html');
     });

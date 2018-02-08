@@ -16,14 +16,14 @@ h6{
         width: 410px;
         height: 500px;
         float: left;
-        div{
+        .bigList{
             border: 1px solid #ddd;
             img{
                 width: 408px;
                 height: 410px;
             }
         } 
-        ul{
+        .smallList{
             height: 90px;
             width: 410px;   
             padding-top: 10px;
@@ -38,9 +38,9 @@ h6{
                     height: 58px;
                 }
             }
-        }
-        .active{
-            border: 1px solid $hilightColor;
+            .active1{
+                border: 1px solid $hilightColor;
+            }
         }
     }
 
@@ -201,7 +201,7 @@ h6{
                     border-right: 1px solid #ddd;
                 }
             }
-            .active{
+            .active2{
                 border: 1px solid $hilightColor;
                 color:$hilightColor;
                 border-bottom: 0;

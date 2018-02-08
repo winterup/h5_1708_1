@@ -15,22 +15,22 @@ h6 {
   float: left;
 }
 
-.main_t .main_tl div {
+.main_t .main_tl .bigList {
   border: 1px solid #ddd;
 }
 
-.main_t .main_tl div img {
+.main_t .main_tl .bigList img {
   width: 408px;
   height: 410px;
 }
 
-.main_t .main_tl ul {
+.main_t .main_tl .smallList {
   height: 90px;
   width: 410px;
   padding-top: 10px;
 }
 
-.main_t .main_tl ul li {
+.main_t .main_tl .smallList li {
   width: 60px;
   height: 60px;
   border: 1px solid #ddd;
@@ -38,12 +38,12 @@ h6 {
   margin-right: 10px;
 }
 
-.main_t .main_tl ul li img {
+.main_t .main_tl .smallList li img {
   width: 58px;
   height: 58px;
 }
 
-.main_t .main_tl .active {
+.main_t .main_tl .smallList .active1 {
   border: 1px solid #FE5722;
 }
 
@@ -221,13 +221,13 @@ h6 {
   border-right: 1px solid #ddd;
 }
 
-.main_b .main_br .main_brt .active {
+.main_b .main_br .main_brt .active2 {
   border: 1px solid #FE5722;
   color: #FE5722;
   border-bottom: 0;
 }
 
-.main_b .main_br .main_brt .active span {
+.main_b .main_br .main_brt .active2 span {
   border: 0;
 }
 

@@ -152,7 +152,7 @@ html {
   font-size: 18px;
 }
 
-#main .meiri .meiri_t .active {
+#main .meiri .meiri_t .active1 {
   border-top: 2px solid #FE5722;
   color: #FE5722;
   height: 48px;
@@ -223,12 +223,12 @@ html {
   margin-right: 20px;
 }
 
-#main .jingtiao .jingtiao_t .jingtiao_tc {
+#main .jingtiao .jingtiao_t .jingtiao_tc, #main .jingtiao .jingtiao_t .meirong_tc, #main .jingtiao .jingtiao_t .jiadian_tc, #main .jingtiao .jingtiao_t .fushi_tc, #main .jingtiao .jingtiao_t .shipin_tc, #main .jingtiao .jingtiao_t .huwai_tc {
   float: left;
   width: 720px;
 }
 
-#main .jingtiao .jingtiao_t .jingtiao_tc ul li {
+#main .jingtiao .jingtiao_t .jingtiao_tc ul li, #main .jingtiao .jingtiao_t .meirong_tc ul li, #main .jingtiao .jingtiao_t .jiadian_tc ul li, #main .jingtiao .jingtiao_t .fushi_tc ul li, #main .jingtiao .jingtiao_t .shipin_tc ul li, #main .jingtiao .jingtiao_t .huwai_tc ul li {
   float: left;
   width: 220px;
   height: 290px;
@@ -237,21 +237,21 @@ html {
   margin-bottom: 20px;
   text-align: center;
   padding-top: 20px;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 26px;
 }
 
-#main .jingtiao .jingtiao_t .jingtiao_tc ul li img {
+#main .jingtiao .jingtiao_t .jingtiao_tc ul li img, #main .jingtiao .jingtiao_t .meirong_tc ul li img, #main .jingtiao .jingtiao_t .jiadian_tc ul li img, #main .jingtiao .jingtiao_t .fushi_tc ul li img, #main .jingtiao .jingtiao_t .shipin_tc ul li img, #main .jingtiao .jingtiao_t .huwai_tc ul li img {
   width: 165px;
   height: 160px;
   margin-bottom: 30px;
 }
 
-#main .jingtiao .jingtiao_t .jingtiao_tc ul li i {
+#main .jingtiao .jingtiao_t .jingtiao_tc ul li i, #main .jingtiao .jingtiao_t .meirong_tc ul li i, #main .jingtiao .jingtiao_t .jiadian_tc ul li i, #main .jingtiao .jingtiao_t .fushi_tc ul li i, #main .jingtiao .jingtiao_t .shipin_tc ul li i, #main .jingtiao .jingtiao_t .huwai_tc ul li i {
   color: #FE5722;
 }
 
-#main .jingtiao .jingtiao_t .jingtiao_tc ul .active {
+#main .jingtiao .jingtiao_t .jingtiao_tc ul .active2, #main .jingtiao .jingtiao_t .meirong_tc ul .active2, #main .jingtiao .jingtiao_t .jiadian_tc ul .active2, #main .jingtiao .jingtiao_t .fushi_tc ul .active2, #main .jingtiao .jingtiao_t .shipin_tc ul .active2, #main .jingtiao .jingtiao_t .huwai_tc ul .active2 {
   box-shadow: 0px 3px 10px 3px #ddd;
 }
 

@@ -150,7 +150,7 @@ html{
             width: 196px;
             font-size: 18px;
         }
-        .active{
+        .active1{
             border-top: 2px solid $hilightColor;
             color: $hilightColor;
             height: 48px;
@@ -217,7 +217,7 @@ html{
             float: left;
             margin-right: 20px;
         }
-        .jingtiao_tc{
+        .jingtiao_tc,.meirong_tc,.jiadian_tc,.fushi_tc,.shipin_tc,.huwai_tc{
             float: left;
             width: 720px;
             ul{
@@ -230,7 +230,7 @@ html{
                     margin-bottom: 20px;
                     text-align: center;
                     padding-top: 20px;
-                    font-size: 16px;
+                    font-size: 12px;
                     line-height: 26px;
                     img{
                         width: 165px;
@@ -241,7 +241,7 @@ html{
                         color: $hilightColor;
                     }
                 }
-                .active{
+                .active2{
                     box-shadow: 0px 3px 10px 3px #ddd;
                 }
             } 

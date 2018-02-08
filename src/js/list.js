@@ -22,7 +22,7 @@ require(['config'],function(){
                 var $subMenu = $(this).children('ul');
                 $subMenu.fadeIn();
                 // 高亮当前li
-                $(this).addClass('active').siblings().removeClass('active');
+                $(this).addClass('active0').siblings().removeClass('active0');
             }).mouseleave(function(){
 
                 timer = setTimeout(function(){
@@ -30,7 +30,7 @@ require(['config'],function(){
                     $subMenu.fadeOut();
 
                 }.bind(this),300);
-                $(this).removeClass('active');
+                $(this).removeClass('active0');
             });
 
             // 二维码显示
@@ -71,6 +71,67 @@ require(['config'],function(){
         $('.main_lt div').on('click',function(){
             $(this).next('ul').slideDown().siblings('ul').slideUp();
         })
+
+        // 导入数据
+        $.ajax({
+            url:'../api/list.php',
+            dataType:'json',
+            // data:{
+            //     category:'母婴专区'
+            // },
+            success:function(data){
+                console.log(data.data);
+                var box1 = data.data.map(function(item){
+                    
+                    return`
+                    <li data-id="${item.id}">
+                        <img src="../${item.imgs}"/>
+                        <p>${item.name}</p>
+                        <span><i>${item.price}</i></span>&nbsp&nbsp<span><del>￥</del></span>
+                    </li>
+                    `
+                }).join('');
+                $('.main_rlist ul').html(box1);
+                let pageNo = 1;
+                let qty = 10;
+                let arr_status = [200,304];
+                let xhr = new XMLHttpRequest();
+                var page = document.querySelector('.page');
+                // 处理分页
+                let pageQty = Math.ceil(data.total/data.qty);
+                page.innerText = '';
+                for(let i=1;i<=pageQty;i++){
+                    let span = document.createElement('span');
+                    span.innerText = i;
+                    if(i===data.pageNo){
+                        span.className = 'active';
+                    }
+                    page.appendChild(span);
+                }
+                // POS请求发送数据
+                xhr.send(`pageNo=${pageNo}&qty=${qty}`);
+                // 切换分页
+                page.onclick = function(e){
+                    if(e.target.tagName.toLowerCase() === 'span'){
+                        pageNo = e.target.innerText*1;
+                        xhr.open('post','../api/football.php');
+                        xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+                        xhr.send(`pageNo=${pageNo}&qty=${qty}`);
+                    }
+                }
+
+
+                // 传参
+                $('.main_rlist ul li').on('click',function(){
+                    console.log($(this).attr('data-id'));
+                    var params = '?';
+                    params += 'id='+$(this).attr('data-id');
+                    console.log(params);
+                    // 跳转页面
+                    location.href = 'goods.html' + params;
+                });
+            }
+        });
 
         // 导入尾部
         $('footer').load('../html/footer.html');
