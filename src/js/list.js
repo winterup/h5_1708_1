@@ -114,6 +114,17 @@ require(['config'],function(){
                     // 写入页面
                     main_rlist.innerText = '';
                     main_rlist.appendChild(ul);
+                    console.log($('.main_rlist ul li'));
+                    // 传参
+                    $('.main_rlist ul li').on('click',function(){
+
+                        console.log($(this).attr('data-id'));
+                        var params = '?';
+                        params += 'id='+$(this).attr('data-id');
+                        console.log(params);
+                        // 跳转页面
+                        location.href = 'goods.html' + params;
+                    });
                     // 处理分页
                     let pageQty = Math.ceil(data.total/data.qty);
 
@@ -145,16 +156,8 @@ require(['config'],function(){
                     }
                 }
 
-
-                // 传参
-                $('.main_rlist ul li').on('click',function(){
-                    console.log($(this).attr('data-id'));
-                    var params = '?';
-                    params += 'id='+$(this).attr('data-id');
-                    console.log(params);
-                    // 跳转页面
-                    location.href = 'goods.html' + params;
-                });
+                
+                
             }
         });
 
