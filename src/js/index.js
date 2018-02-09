@@ -65,6 +65,117 @@ require(['config'],function(){
         });
 // --------------------------------------------------------------------------
         // 轮播图
+        let banner=document.querySelector('#banner');
+        let lunbotu=document.querySelector('#banner .lunbotu');
+        let ul=banner.querySelector('#banner .lunbotu ul');
+        ul.appendChild(ul.children[0].cloneNode(true));
+        var li=ul.querySelectorAll('li')[0];
+        console.log(li)       
+        var len=ul.children.length;
+        ul.style.width=lunbotu.clientWidth*5+'px';
+        var idx=0;
+        let timer1=setInterval(autoPlay,2000);
+        
+        // 生成页码按钮 并且默认让第一颗按钮亮
+        let page=document.createElement('div');
+        for(var i=1;i<ul.children.length;i++){
+            let span=document.createElement('span');
+            span.innerText=i;
+            page.appendChild(span);
+            if(i==idx+1){
+                span.classList.add('active');
+                // 开始的时候第一个高亮
+            }
+        }
+        lunbotu.appendChild(page);
+        function autoPlay(){
+             idx++;
+             autoShow();
+        }
+        function autoShow(){    
+            // 当滚动到复制那张图片时，瞬间重置回初始状态
+            if(idx>=len){idx=1;ul.style.left=0;}
+            var target=-li.clientWidth*idx;
+            //  animate_jianban(节点,属性,目标值) 
+            animate_jianban(ul,'left',target);
+            // 高亮页码
+            // 高亮前先清除
+            // 先将高亮的class去掉
+            page.querySelector('.active').classList.remove('active');
+            if(idx<len-1){
+                page.children[idx].className='active';
+                // 跑到复制的那一张 高亮第一张
+            }else{
+                page.children[0].className='active';
+            }
+
+        }
+
+        // 当鼠标一进去时，图片暂停
+        lunbotu.addEventListener('mouseenter',()=>{
+            clearInterval(timer1);
+        })
+
+        lunbotu.addEventListener('mouseleave',()=>{
+            timer1=setInterval(autoPlay,3000)
+        })
+
+        lunbotu.addEventListener('click',e=>{
+                if(e.target.tagName.toLowerCase()==='span'){
+                    idx=e.target.innerText-1;
+                    console.log(e.target)            
+                    autoShow();   
+                }
+                if(e.target.className==='l2'){
+                    console.log(e.target)
+                    if(idx>len-1){
+                        idx=0;
+                    }
+                    idx++;
+                    autoShow();
+                }
+                if(e.target.className==='l1'){
+                    if(idx<1){
+                        idx=len-1;
+                        ul.style.left=-(len-1)*li.clientWidth+'px';
+                    }
+                    idx--;
+                    autoShow();
+                }
+        })
+        function animate_jianban(ele,attr,target){
+            var timername = attr + 'timer';//toptimer,lefttimer
+            clearInterval(ele[timername]);
+            ele[timername] = setInterval(()=>{
+                // 获取当前值
+                let current = getComputedStyle(ele)[attr];//'100px,50deg,0.3'
+
+                //提取单位
+                let unit = current.match(/[a-z]+$/);//px,deg,null
+
+                // 
+                unit = unit ? unit[0] : '';
+
+                // 提取值
+                current = parseFloat(current);
+
+                // 计算缓冲速度
+                let speed = Math.floor((target-current)/10);//-32->20->10->5.5->0.5
+
+                // 计算top值
+                current += speed;
+
+                if(current === target || speed === 0){
+                    clearInterval(ele[timername]);
+
+                    // 重置current值
+                    current = target;
+                }
+
+                ele.style[attr] = current + unit;
+
+            },30);
+        }
             
         // 抖动图
         $('.qianggou_b li img').on('mouseover',function(){
@@ -92,7 +203,7 @@ require(['config'],function(){
             // 26h:01天02时05分05秒
             if(offset <= 0){
                 // 清除定时器
-                clearInterval(timer);
+                clearInterval(timer1);
             }
             var sec = offset%60;
             var min = Math.floor(offset/60)%60;

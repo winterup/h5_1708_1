@@ -107,15 +107,17 @@
 
 .nav .container .sanji ul > li {
   color: #fff;
+  position: relative;
 }
 
 .nav .container .sanji ul > li > ul {
+  z-index: 999;
   position: absolute;
   width: 220px;
   height: 400px;
   text-align: left;
   background: #fff;
-  top: 186px;
+  top: 40px;
 }
 
 .nav .container .sanji ul > li > ul li {
@@ -186,6 +188,7 @@
 }
 
 .fixed {
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;

@@ -220,5 +220,28 @@ h6{
                 font-size: 14px;
             }
         }
+
+    }
+    .page{
+        text-align: center;
+        padding-left: 400px;
+        height: 30px;
+        
+        span{
+            display: block;
+            float: left;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            color:#ccc;
+            line-height: 30px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+        .active_p{
+            background: $hilightColor;
+            color:#fff;
+            border: 0;
+        }
     }
 }

@@ -80,41 +80,66 @@ require(['config'],function(){
             //     category:'母婴专区'
             // },
             success:function(data){
-                console.log(data.data);
-                var box1 = data.data.map(function(item){
+                // console.log(data.data);
+                // var box1 = data.data.map(function(item){
                     
-                    return`
-                    <li data-id="${item.id}">
-                        <img src="../${item.imgs}"/>
-                        <p>${item.name}</p>
-                        <span><i>${item.price}</i></span>&nbsp&nbsp<span><del>￥</del></span>
-                    </li>
-                    `
-                }).join('');
-                $('.main_rlist ul').html(box1);
+                //     return`
+                //     <li data-id="${item.id}">
+                //         <img src="../${item.imgs}"/>
+                //         <p>${item.name}</p>
+                //         <span><i>${item.price}</i></span>&nbsp&nbsp<span><del>￥</del></span>
+                //     </li>
+                //     `
+                // }).join('');
+                // $('.main_rlist ul').html(box1);
+                var page = document.querySelector('.page');
+                var main_rlist = document.querySelector('.main_rlist');
                 let pageNo = 1;
-                let qty = 10;
+                let qty = 20;
                 let arr_status = [200,304];
                 let xhr = new XMLHttpRequest();
-                var page = document.querySelector('.page');
-                // 处理分页
-                let pageQty = Math.ceil(data.total/data.qty);
-                page.innerText = '';
-                for(let i=1;i<=pageQty;i++){
-                    let span = document.createElement('span');
-                    span.innerText = i;
-                    if(i===data.pageNo){
-                        span.className = 'active';
-                    }
-                    page.appendChild(span);
+                xhr.onload = ()=>{
+                    let res = JSON.parse(xhr.responseText);console.log(res)
+
+                    let ul = document.createElement('ul');
+                    ul.innerHTML = res.data.map(item=>{
+                        return`
+                        <li data-id="${item.id}">
+                            <img src="../${item.imgs}"/>
+                            <p>${item.name}</p>
+                            <span><i>${item.price}</i></span>&nbsp&nbsp<span><del>￥</del></span>
+                        </li>
+                        `
+                    });
+                    // 写入页面
+                    main_rlist.innerText = '';
+                    main_rlist.appendChild(ul);
+                    // 处理分页
+                    let pageQty = Math.ceil(data.total/data.qty);
+
+                    page.innerText = '';
+                    for(let i=1;i<=pageQty;i++){
+                        let span = document.createElement('span');
+                        span.innerText = i;
+                        if(i===data.pageNo){
+                            span.className = 'active_p';
+                        }
+                        page.appendChild(span);
+                    } 
+                    console.log(page)
                 }
+                
+                xhr.open('post','../api/list.php');
+                xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+
                 // POS请求发送数据
                 xhr.send(`pageNo=${pageNo}&qty=${qty}`);
                 // 切换分页
                 page.onclick = function(e){
                     if(e.target.tagName.toLowerCase() === 'span'){
+                        console.log(666);
                         pageNo = e.target.innerText*1;
-                        xhr.open('post','../api/football.php');
+                        xhr.open('post','../api/list.php');
                         xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                         xhr.send(`pageNo=${pageNo}&qty=${qty}`);
                     }

@@ -235,3 +235,27 @@ h6 {
   color: #FE5722;
   font-size: 14px;
 }
+
+.main_r .page {
+  text-align: center;
+  padding-left: 400px;
+  height: 30px;
+}
+
+.main_r .page span {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  color: #ccc;
+  line-height: 30px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.main_r .page .active_p {
+  background: #FE5722;
+  color: #fff;
+  border: 0;
+}

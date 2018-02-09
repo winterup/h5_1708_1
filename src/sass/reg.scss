@@ -1,0 +1,112 @@
+// 导入scss文件
+@import 'var';
+
+.head_b{
+    background: #fff;
+    height: 150px;
+    border-bottom: 2px solid $hilightColor;
+
+    .container{
+        height: 103px;
+        h1{
+            float: left;
+            width: 225px;
+            height: 88px;
+            background: url(../img/header4.gif) no-repeat;
+            margin-top: 33px;
+        }
+
+        div{
+            float: left;
+            width: 500px;
+            height: 120px;
+            background: url(../img/reg1.png) no-repeat;
+        }
+
+        span{
+            float: right;
+            margin-top: 100px;
+            i{
+                color: $hilightColor;
+            }
+        }
+    }
+}
+
+#main{
+    padding-top: 40px;
+    padding-left: 190px;
+    background: #FBFBFB;
+    .zhuce{
+        width: 880px;
+        height: 650px;
+        background: #fff;
+        // text-align: center;
+        padding-top: 50px;
+        margin-bottom: 10px;
+        box-shadow:0 0 15px 0px pink;
+        div{
+            margin-bottom: 40px;
+            text-align: center;
+            span{
+                display: none;
+            }
+        }
+        input{
+            width: 280px;
+            height: 30px;
+            border: 1px solid #ddd;
+        }
+        #yanzheng{
+            width: 150px
+        }
+        span{
+            display: block;
+            i{
+                
+                color:$hilightColor;
+            }
+        }
+        button{
+            width: 280px;
+            height: 30px;
+            color: #fff;
+            background:$hilightColor;
+            margin-left: 18rem;
+            margin-top: 20px;
+        }
+    }
+}
+
+#footer{
+    background: #FBFBFB;
+    height: 140px;
+    padding-top: 70px;
+    
+    .foot_c .foot_cu{
+        text-align: center;
+        height: 12px;
+        margin-left: 445px;
+        margin-bottom: 8px;
+        line-height: 12px;
+        font-size: 12px;
+
+        li{
+            padding: 0 4px;
+            float: left;
+            border-right: 2px solid #828D82;
+
+            a{
+                color: #8D8D8D;
+            }
+        }
+    }
+
+    .foot_b p{
+        margin-left: 312px;
+        font-size: 14px;
+        height: 14px;
+        line-height: 14px;
+        color: #8D8D8D;
+    }
+}

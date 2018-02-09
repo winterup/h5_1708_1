@@ -1,0 +1,117 @@
+// 导入scss文件
+@import 'var';
+
+.head_b{
+    background: #fff;
+    height: 120px;
+
+    .container{
+        height: 103px;
+        h1{
+            float: left;
+            width: 225px;
+            height: 88px;
+            background: url(../img/header4.gif) no-repeat;
+            margin-top: 33px;
+        }
+
+        div{
+            float: left;
+            width: 500px;
+            height: 120px;
+            background: url(../img/login1.png) no-repeat;
+        }
+    }
+}
+
+#main{
+    height: 440px;
+    background: url(../img/login2.jpg) center;
+    padding-left: 770px;
+    padding-top: 40px;
+    .denglu{
+        width: 360px;
+        height: 380px;
+        padding: 30px 25px 0 25px;
+        background: #fff;
+        ul{
+            li:nth-child(1){
+                height: 20px;
+                line-height: 20px;
+                margin-bottom: 25px;
+                span{
+                    font-size: 16px;
+                }
+                i{
+                    font-size: 12px;
+                    color: skyblue;
+                    float: right;
+                }
+            }
+            li:nth-child(2),li:nth-child(3){
+                text-align: center;
+                margin-bottom: 20px;
+                input{
+                    width: 300px;
+                    height: 40px;
+                    border: 1px solid #ddd;
+                }
+            }
+            li:nth-child(4){
+                margin-bottom: 30px;
+                span{
+                    font-size: 12px;
+                }
+                span:nth-child(3){
+                    float: right;
+                }
+            }
+            li:nth-child(5){
+                // width: 300px;
+                height: 40px;
+                background: $hilightColor;
+                text-align: center;
+                line-height: 40px;
+                color:#fff;
+                margin-bottom: 20px;
+            }
+            li:nth-child(6){
+                height: 60px;
+                background: url(../img/login3.png) no-repeat;
+            }
+        }
+    }
+}
+
+#footer{
+    background: #fff;
+    height: 140px;
+    padding-top: 70px;
+    
+    .foot_c .foot_cu{
+        text-align: center;
+        height: 12px;
+        margin-left: 445px;
+        margin-bottom: 8px;
+        line-height: 12px;
+        font-size: 12px;
+
+        li{
+            padding: 0 4px;
+            float: left;
+            border-right: 2px solid #828D82;
+
+            a{
+                color: #8D8D8D;
+            }
+        }
+    }
+
+    .foot_b p{
+        margin-left: 312px;
+        font-size: 14px;
+        height: 14px;
+        line-height: 14px;
+        color: #8D8D8D;
+    }
+}

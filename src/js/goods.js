@@ -92,7 +92,7 @@ require(['config'],function(){
                 // category:'母婴专区'
             },
             success:function(data){
-                console.log(data.imgs);
+                console.log(data);
                 var box1 = (function(){
                     return`
                     <img src="../${data.imgs}"/>
@@ -155,6 +155,45 @@ require(['config'],function(){
                         $copyImg.remove();
                     });
                 });
+
+                // cookie
+                var goodslist = [];
+                // 获取cookie
+                var cookies = document.cookie;
+                cookies = cookies.split('; ');
+                cookies.forEach(function(item){
+                    var arr = item.split('=');
+                    if(arr[0] === 'goodslist'){
+                        goodslist = JSON.parse(arr[1]);
+                    }
+                });
+                $('.gouwuche').on('click',function(e){
+                    // 判断当前商品是否已经存在cookie当中
+                    for(var i=0;i<goodslist.length;i++){
+                        if(goodslist[i].id === data.id){
+                            goodslist[i].qty++;
+                            break;
+                        }
+                    }
+                    // 如果i的值等于goodslist.length
+                    // 说明循环执行完成后，无法找对应id的商品
+                    if(i===goodslist.length){
+                        // 通过按钮获取商品信息
+                        var goods = {
+                            id:data.id,
+                            imgurl:data.imgs,
+                            name:data.name,
+                            price:data.price,
+                            qty:$('.shuliang1 input').attr('value')
+                        }
+
+                        // 添加到数组
+                        goodslist.push(goods);
+                        console.log($('.shuliang1 input').attr('value'));
+                    }
+                    // 写入cookie
+                    document.cookie = 'goodslist='+JSON.stringify(goodslist);
+                })
             }
             
         });
@@ -168,4 +207,3 @@ require(['config'],function(){
 
     
 });
-    

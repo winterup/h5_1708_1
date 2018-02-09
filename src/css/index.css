@@ -2,16 +2,6 @@ html {
   background: #F3F3F3;
 }
 
-#banner .lunbotu ul li {
-  width: 100%;
-  height: 400px;
-  display: none;
-}
-
-#banner .lunbotu ul li:nth-child(1) {
-  display: block;
-}
-
 #banner .gonggao {
   width: 220px;
   height: 400px;
@@ -48,7 +38,9 @@ html {
 }
 
 #main .xianshi {
+  margin-top: 400px;
   height: 400px;
+  margin-bottom: 20px;
 }
 
 #main .xianshi .qianggou {
@@ -137,6 +129,7 @@ html {
 
 #main .meiri {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #main .meiri .meiri_t {
@@ -329,4 +322,86 @@ html {
 
 #main .xihuan .xihuan_t .xihuan_tr {
   float: left;
+}
+
+#banner .lunbotu {
+  float: left;
+  width: 1263px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#banner .lunbotu ul {
+  height: 400px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#banner .lunbotu img {
+  display: inline-block;
+  width: 1263px;
+  height: 400px;
+  position: absolute;
+}
+
+#banner .lunbotu ul li {
+  width: 1263px;
+  height: 400px;
+  float: left;
+}
+
+#banner .lunbotu div {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  padding: 10px;
+  transform: translateX(50%);
+}
+
+#banner div span {
+  display: inline-block;
+  margin: 0 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#banner div span.active {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.left {
+  position: absolute;
+  left: 250px;
+  top: 40%;
+  opacity: 0.5;
+  width: 30px;
+  height: 60px;
+}
+
+.right {
+  position: absolute;
+  left: 71%;
+  top: 40%;
+  opacity: 0.5;
+  width: 30px;
+  height: 60px;
+}
+
+#banner .lunbotu .left img {
+  width: 30px;
+  height: 60px;
+}
+
+#banner .lunbotu .right img {
+  width: 30px;
+  height: 60px;
 }

@@ -1,0 +1,117 @@
+.head_b {
+  background: #fff;
+  height: 150px;
+  border-bottom: 2px solid #FE5722;
+}
+
+.head_b .container {
+  height: 103px;
+}
+
+.head_b .container h1 {
+  float: left;
+  width: 225px;
+  height: 88px;
+  background: url(../img/header4.gif) no-repeat;
+  margin-top: 33px;
+}
+
+.head_b .container div {
+  float: left;
+  width: 500px;
+  height: 120px;
+  background: url(../img/reg1.png) no-repeat;
+}
+
+.head_b .container span {
+  float: right;
+  margin-top: 100px;
+}
+
+.head_b .container span i {
+  color: #FE5722;
+}
+
+#main {
+  padding-top: 40px;
+  padding-left: 190px;
+  background: #FBFBFB;
+}
+
+#main .zhuce {
+  width: 880px;
+  height: 650px;
+  background: #fff;
+  padding-top: 50px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px 0px pink;
+}
+
+#main .zhuce div {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#main .zhuce div span {
+  display: none;
+}
+
+#main .zhuce input {
+  width: 280px;
+  height: 30px;
+  border: 1px solid #ddd;
+}
+
+#main .zhuce #yanzheng {
+  width: 150px;
+}
+
+#main .zhuce span {
+  display: block;
+}
+
+#main .zhuce span i {
+  color: #FE5722;
+}
+
+#main .zhuce button {
+  width: 280px;
+  height: 30px;
+  color: #fff;
+  background: #FE5722;
+  margin-left: 18rem;
+  margin-top: 20px;
+}
+
+#footer {
+  background: #FBFBFB;
+  height: 140px;
+  padding-top: 70px;
+}
+
+#footer .foot_c .foot_cu {
+  text-align: center;
+  height: 12px;
+  margin-left: 445px;
+  margin-bottom: 8px;
+  line-height: 12px;
+  font-size: 12px;
+}
+
+#footer .foot_c .foot_cu li {
+  padding: 0 4px;
+  float: left;
+  border-right: 2px solid #828D82;
+}
+
+#footer .foot_c .foot_cu li a {
+  color: #8D8D8D;
+}
+
+#footer .foot_b p {
+  margin-left: 312px;
+  font-size: 14px;
+  height: 14px;
+  line-height: 14px;
+  color: #8D8D8D;
+}

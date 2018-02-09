@@ -108,15 +108,17 @@
             line-height: 40px;
             ul>li{
                 color: #fff;
+                position:relative;
             }
             ul>li>ul{
-                // display:none;
+                z-index:999;
+                // display:block;
                 position:absolute;
                 width: 220px;
                 height: 400px;
                 text-align: left;
                 background: #fff;
-                top: 186px;
+                top: 40px;
                 li{
                     padding-left: 20px;
                     a{
@@ -181,6 +183,7 @@
     }
 }
 .fixed{
+    z-index:999;
     position:fixed;
     top: 0;
     left:0;
